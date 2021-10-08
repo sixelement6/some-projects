@@ -1,0 +1,25 @@
+CREATE TABLE `courses` (
+  `course_id` int NOT NULL AUTO_INCREMENT,
+  `course_name` varchar(100) NOT NULL,
+  `course_img` varchar(100) DEFAULT NULL,
+  `course_duration` decimal(3,1) NOT NULL,
+  `course_description` longtext,
+  PRIMARY KEY (`course_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+CREATE TABLE `team` (
+  `member_id` int NOT NULL AUTO_INCREMENT,
+  `member_name` varchar(100) NOT NULL,
+  `member_photo` varchar(100) DEFAULT NULL,
+  `member_description` longtext,
+  PRIMARY KEY (`member_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+CREATE TABLE `users` (
+  `user_id` int NOT NULL AUTO_INCREMENT,
+  `user_login` varchar(30) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `user_full_name` varchar(100) NOT NULL,
+  `user_email` varchar(100) NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
